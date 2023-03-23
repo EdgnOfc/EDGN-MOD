@@ -38,7 +38,7 @@ public class Keybinder {
         if (keyBindings[1].isPressed()) {
 
             if (TnaSpeedrun.tnaSpeedrunBool) {
-                ChatUtils.message(player, tag + ChatFormatting.GOLD + ChatFormatting.BOLD +  "Tna speedrun module deactivated, coming soon");
+                ChatUtils.message(player, tag + ChatFormatting.GOLD + ChatFormatting.BOLD +  "Tna speedrun module deactivated");
                 verify = false;
                 starter = false;
                 failChecker = false;
@@ -46,7 +46,7 @@ public class Keybinder {
 
 
             } else {
-                ChatUtils.message(player,  tag + ChatFormatting.GOLD + ChatFormatting.BOLD + "Tna speedrun module activated, coming soon ");
+                ChatUtils.message(player,  tag + ChatFormatting.GOLD + ChatFormatting.BOLD + "Tna speedrun module activated");
                 verify = true;
                 starter = true;
                 failChecker = true;
