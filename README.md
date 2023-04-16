@@ -7,7 +7,8 @@
  
  Toggle keybind P to see your party raid stats ( displays automatically whenever you join a party if it doesn't work just do /pa list)
  
+ A GUI has been added ! Check out your keybinds.
  
- Toggle keybind H to activate the TNA speedrun timer ( only displays the time you took in a room and the overall time of the raid in the chat for now ). Activate it before entering the raid, you do not have to deactivate and reactivate it after a compeltion or a fail.
+ "Watched counter" is not working yet
   
   
