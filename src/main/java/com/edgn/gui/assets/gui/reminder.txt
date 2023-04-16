@@ -1,0 +1,21 @@
+        if (keyBindings[1].isPressed()) {
+
+            if (TnaSpeedrun.tnaSpeedrunBool) {
+                ChatUtils.message(player, tag + ChatFormatting.GOLD + ChatFormatting.BOLD +  "Tna speedrun module deactivated");
+                verify = false;
+                starter = false;
+                failChecker = false;
+                TnaSpeedrun.tnaSpeedrunBool = false;
+
+
+            } else {
+                ChatUtils.message(player,  tag + ChatFormatting.GOLD + ChatFormatting.BOLD + "Tna speedrun module activated");
+                verify = true;
+                starter = true;
+                failChecker = true;
+                TnaSpeedrun.tnaSpeedrunBool = true;
+                new TnaSpeedrun();
+
+            }
+
+        }

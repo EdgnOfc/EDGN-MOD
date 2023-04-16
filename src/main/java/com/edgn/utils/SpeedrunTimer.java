@@ -3,7 +3,6 @@ public class SpeedrunTimer {
     public static long startTime;
     public static long splitTime;
     public static long totalTime;
-
     public static void start() {
         startTime = System.currentTimeMillis();
         splitTime = startTime;

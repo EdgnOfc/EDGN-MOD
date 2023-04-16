@@ -1,8 +1,8 @@
 package com.edgn.keybinds;
 
+import com.edgn.gui.GuiMain;
 import com.mojang.realmsclient.gui.ChatFormatting;
 import com.edgn.commands.raids.ShowPartyRaidCompletions;
-import com.edgn.commands.raids.TnaSpeedrun;
 import com.edgn.main.Main;
 import com.edgn.utils.ChatUtils;
 import net.minecraft.client.Minecraft;
@@ -36,25 +36,7 @@ public class Keybinder {
         }
 
         if (keyBindings[1].isPressed()) {
-
-            if (TnaSpeedrun.tnaSpeedrunBool) {
-                ChatUtils.message(player, tag + ChatFormatting.GOLD + ChatFormatting.BOLD +  "Tna speedrun module deactivated");
-                verify = false;
-                starter = false;
-                failChecker = false;
-                TnaSpeedrun.tnaSpeedrunBool = false;
-
-
-            } else {
-                ChatUtils.message(player,  tag + ChatFormatting.GOLD + ChatFormatting.BOLD + "Tna speedrun module activated");
-                verify = true;
-                starter = true;
-                failChecker = true;
-                TnaSpeedrun.tnaSpeedrunBool = true;
-                new TnaSpeedrun();
-
-            }
-
+            Minecraft.getMinecraft().displayGuiScreen(new GuiMain());
         }
 
     }

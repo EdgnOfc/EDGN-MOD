@@ -1,12 +1,11 @@
 package com.edgn.main;
 
 import com.edgn.events.TnaSpeedrunTickEvent;
-import org.lwjgl.input.Keyboard;
-
 import com.edgn.commands.help.HelpPage1;
 import com.edgn.commands.raids.ShowPartyRaidCompletions;
 import com.edgn.commands.raids.ShowRaidCompletions;
 import com.edgn.keybinds.Keybinder;
+import com.edgn.main.config.Config;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,32 +14,37 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import org.lwjgl.input.Keyboard;
+
+import java.io.File;
+
+import static com.edgn.main.config.Config.tnaSpeedrunBool;
 
 
 @Mod(modid = Main.MODID, name = Main.NAME, version = Main.VERSION)
 public class Main {
-
+    public static boolean tnaBoolTester = !tnaSpeedrunBool;
     public static final String MODID = "edgnraidutils";
     public static final String NAME = "edgn mod";
-    public static final String VERSION = "1.2";
+    public static final String VERSION = "1.3";
     public static KeyBinding[] keyBindings;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
+        Config.loadConfig(new File(event.getModConfigurationDirectory(), "edgnraidutils.cfg"));
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-
         keyBindings = new KeyBinding[2];
 
-        keyBindings[0] = new KeyBinding("Party stats displayer toggler", Keyboard.KEY_P, "EDGN's RAID UTILITY");
-        keyBindings[1] = new KeyBinding("Tna speedrun toggler", Keyboard.KEY_H, "EDGN's RAID UTILITY");
+        keyBindings[0] = new KeyBinding("Party stats displayer toggler", Keyboard.KEY_P, "EDGN's MOD");
+        keyBindings[1] = new KeyBinding("EDGN MOD GUI", Keyboard.KEY_8, "EDGN's MOD");
+        //keyBindings[2] = new KeyBinding("EDGN MOD GUI", Keyboard.KEY_8, "EDGN's MOD");
 
-        for (int i = 0; i < keyBindings.length; ++i)
-        {
-            ClientRegistry.registerKeyBinding(keyBindings[i]);
+
+        for (KeyBinding keyBinding : keyBindings) {
+            ClientRegistry.registerKeyBinding(keyBinding);
         }
 
         MinecraftForge.EVENT_BUS.register(new Keybinder());
@@ -55,6 +59,5 @@ public class Main {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-
     }
 }

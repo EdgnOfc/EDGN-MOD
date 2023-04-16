@@ -73,6 +73,7 @@ public class ShowRaidCompletions extends CommandBase {
 
     @Override
     public int getRequiredPermissionLevel() {
+
         return 0;
     }
 }

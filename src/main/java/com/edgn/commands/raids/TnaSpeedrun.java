@@ -1,5 +1,6 @@
 package com.edgn.commands.raids;
 
+import com.edgn.main.config.Config;
 import com.edgn.utils.ChatUtils;
 import com.edgn.utils.SpeedrunTimer;
 import com.edgn.utils.SpeedrunTimerByRoom;
@@ -7,12 +8,9 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 
-import java.util.ArrayList;
 import static com.edgn.keybinds.Keybinder.*;
 
-
 public class TnaSpeedrun {
-    public static boolean tnaSpeedrunBool = false;
 
     public TnaSpeedrun() {
         run();
@@ -25,8 +23,7 @@ public class TnaSpeedrun {
         String tag = ChatFormatting.BLACK + "[" + ChatFormatting.AQUA + "EDGN" + ChatFormatting.BLACK + "] " + ChatFormatting.GOLD;
 
 
-        if (!tnaSpeedrunBool) return;
-
+        if (!Config.tnaSpeedrunBool) return;
         if (starter && (player.getPosition().getX() >= 27770
                 && player.getPosition().getX() <= 27780 && player.getPosition().getZ() >= -22054
                     && player.getPosition().getZ() <= -22044 || player.getPosition().getX() >= 24489
@@ -141,6 +138,5 @@ public class TnaSpeedrun {
 
             ChatUtils.message(player, tag + ChatFormatting.GOLD + "Skill Issue");
         }
-
     }
 }
