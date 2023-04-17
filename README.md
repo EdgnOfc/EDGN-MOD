@@ -11,6 +11,6 @@
  
  A GUI has been added ! Check out your keybinds.
  
- "Watched counter" is not working yet
+ "Watched counter" is not working yet.
   
   
