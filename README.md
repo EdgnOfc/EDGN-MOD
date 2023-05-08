@@ -1,7 +1,7 @@
 # EDGN-MOD
  TOP RAIDA
  
- Download link : [https://github.com/EdgnOfc/EDGN-MOD/raw/main/releases/edgnraidutils-1.3.jar](https://github.com/EdgnOfc/EDGN-MOD/raw/main/releases/edgnraidutils-1.3.1.jar)
+ Download : [click here](https://github.com/EdgnOfc/EDGN-MOD/raw/main/releases/edgnraidutils-1.3.1.jar)
  
  /edh -> help command
  
