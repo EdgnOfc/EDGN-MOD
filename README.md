@@ -12,10 +12,12 @@
  # Patchnote
  
  ## 1.3
- A GUI has been added ! Check out your keybinds.
+ A GUI has been added 
+ 
+ Tna Speedrun Module - TNA CATEGORY
  
  ## 1.3.1
  
- Xp auto guild setter has been added
+ Xp auto guild setter - MISCELLANEOUS CATEGORY
   
   
