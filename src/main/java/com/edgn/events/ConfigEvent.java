@@ -6,7 +6,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
+import static com.edgn.main.Main.guildXpSetterTester;
 import static com.edgn.main.Main.tnaBoolTester;
+import static com.edgn.main.config.Config.guildXpSetterBool;
 import static com.edgn.main.config.Config.tnaSpeedrunBool;
 
 public class ConfigEvent {
@@ -19,6 +21,11 @@ public class ConfigEvent {
 
             if (tnaSpeedrunBool == tnaBoolTester) {
                 tnaBoolTester = !tnaSpeedrunBool;
+                Config.saveConfig();
+            }
+
+            if (guildXpSetterBool == guildXpSetterTester) {
+                guildXpSetterTester = !guildXpSetterBool;
                 Config.saveConfig();
             }
 

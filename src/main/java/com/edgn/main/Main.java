@@ -19,12 +19,14 @@ import org.lwjgl.input.Keyboard;
 
 import java.io.File;
 
+import static com.edgn.main.config.Config.guildXpSetterBool;
 import static com.edgn.main.config.Config.tnaSpeedrunBool;
 
 
 @Mod(modid = Main.MODID, name = Main.NAME, version = Main.VERSION)
 public class Main {
     public static boolean tnaBoolTester = !tnaSpeedrunBool;
+    public static boolean guildXpSetterTester = !guildXpSetterBool;
     public static final String MODID = "edgnraidutils";
     public static final String NAME = "edgn mod";
     public static final String VERSION = "1.3.1";
