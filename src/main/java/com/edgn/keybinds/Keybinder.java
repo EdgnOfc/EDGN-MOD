@@ -1,15 +1,20 @@
 package com.edgn.keybinds;
 
 import com.edgn.gui.GuiMain;
+import com.edgn.main.config.Config;
 import com.mojang.realmsclient.gui.ChatFormatting;
-import com.edgn.commands.raids.ShowPartyRaidCompletions;
+import com.edgn.modules.raids.ShowPartyRaidCompletions;
 import com.edgn.main.Main;
 import com.edgn.utils.ChatUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
+
+import java.util.List;
 
 public class Keybinder {
     public static boolean verify = false;

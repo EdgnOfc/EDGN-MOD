@@ -1,4 +1,4 @@
-package com.edgn.commands.raids;
+package com.edgn.modules.raids;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;

@@ -1,4 +1,4 @@
-package com.edgn.commands.raids;
+package com.edgn.modules.raids;
 
 import com.edgn.utils.ChatUtils;
 import com.edgn.utils.WynnApiUtils;

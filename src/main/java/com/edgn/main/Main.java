@@ -1,9 +1,10 @@
 package com.edgn.main;
 
-import com.edgn.events.TnaSpeedrunTickEvent;
-import com.edgn.commands.help.HelpPage1;
-import com.edgn.commands.raids.ShowPartyRaidCompletions;
-import com.edgn.commands.raids.ShowRaidCompletions;
+import com.edgn.events.ConfigEvent;
+import com.edgn.events.TickEvent;
+import com.edgn.modules.help.HelpPage1;
+import com.edgn.modules.raids.ShowPartyRaidCompletions;
+import com.edgn.modules.raids.ShowRaidCompletions;
 import com.edgn.keybinds.Keybinder;
 import com.edgn.main.config.Config;
 import net.minecraft.client.settings.KeyBinding;
@@ -26,7 +27,7 @@ public class Main {
     public static boolean tnaBoolTester = !tnaSpeedrunBool;
     public static final String MODID = "edgnraidutils";
     public static final String NAME = "edgn mod";
-    public static final String VERSION = "1.3";
+    public static final String VERSION = "1.3.1";
     public static KeyBinding[] keyBindings;
 
     @Mod.EventHandler
@@ -36,11 +37,11 @@ public class Main {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+
         keyBindings = new KeyBinding[2];
 
         keyBindings[0] = new KeyBinding("Party stats displayer toggler", Keyboard.KEY_P, "EDGN's MOD");
         keyBindings[1] = new KeyBinding("EDGN MOD GUI", Keyboard.KEY_8, "EDGN's MOD");
-        //keyBindings[2] = new KeyBinding("EDGN MOD GUI", Keyboard.KEY_8, "EDGN's MOD");
 
 
         for (KeyBinding keyBinding : keyBindings) {
@@ -54,7 +55,10 @@ public class Main {
         ClientCommandHandler.instance.registerCommand(new HelpPage1());
         //Raids Commandes and utilities
         ClientCommandHandler.instance.registerCommand(new ShowRaidCompletions());
-        MinecraftForge.EVENT_BUS.register(new TnaSpeedrunTickEvent());
+
+        //more events
+        MinecraftForge.EVENT_BUS.register(new TickEvent());
+        MinecraftForge.EVENT_BUS.register(new ConfigEvent());
     }
 
     @Mod.EventHandler

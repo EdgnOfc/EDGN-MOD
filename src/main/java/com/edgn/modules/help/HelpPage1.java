@@ -1,4 +1,4 @@
-package com.edgn.commands.help;
+package com.edgn.modules.help;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 import com.edgn.utils.ChatUtils;

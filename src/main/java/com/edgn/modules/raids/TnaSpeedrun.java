@@ -1,4 +1,4 @@
-package com.edgn.commands.raids;
+package com.edgn.modules.raids;
 
 import com.edgn.main.config.Config;
 import com.edgn.utils.ChatUtils;
