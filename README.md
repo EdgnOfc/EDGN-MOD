@@ -18,6 +18,6 @@
  
  ## 1.3.1
  
- Xp auto guild setter - MISCELLANEOUS CATEGORY
+Auto xp guild setter - MISCELLANEOUS CATEGORY
   
   
